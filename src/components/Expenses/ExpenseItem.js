@@ -12,17 +12,19 @@ function ExpenseItem(props) {
     }
 
     return (
-        <Card className="expense-item">
-            <ExpenseDate date={props.date}/>
-            <div className="expense-item-description">
-                <h2>{title}</h2>
-                <div className="expense-item-price">{props.amount}</div>
-            </div>
-            {/* dont use parentheses on click handler 
-            because then the function will be done at 
-            initial rendering, not when event actually occurs */}
-            <button onClick={clickHandler}>Change Title</button>
-        </Card>
+        <li>
+            <Card className="expense-item">
+                <ExpenseDate date={props.date}/>
+                    <div className="expense-item-description">
+                        <h2>{title}</h2>
+                        <div className="expense-item-price">{props.amount}</div>
+                    </div>
+                    {/* dont use parentheses on click handler 
+                    because then the function will be done at 
+                    initial rendering, not when event actually occurs */}
+                <button onClick={clickHandler}>Change Title</button>
+            </Card>
+        </li>
     );
 }
 
