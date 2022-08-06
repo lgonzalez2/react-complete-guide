@@ -17,7 +17,7 @@ function ExpenseItem(props) {
                 <ExpenseDate date={props.date}/>
                     <div className="expense-item-description">
                         <h2>{title}</h2>
-                        <div className="expense-item-price">{props.amount}</div>
+                        <div className="expense-item-price">{'$' + props.amount}</div>
                     </div>
                     {/* dont use parentheses on click handler 
                     because then the function will be done at 
